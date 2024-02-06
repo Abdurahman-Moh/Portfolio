@@ -106,3 +106,17 @@ picture.addEventListener("mousemove", function (e) {
 
   circle.style.transform = `translate(${x}px, ${y}px)`;
 });
+
+const observern = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry);
+    if (entry.isIntersecting) {
+      entry.target.classList.add("shown");
+    } else {
+      entry.target.classList.remove("shown");
+    }
+  });
+});
+
+const darkenElements = document.querySelectorAll(".darken");
+darkenElements.forEach((element) => observer.observe(element));
