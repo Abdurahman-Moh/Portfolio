@@ -180,6 +180,18 @@ body {
   transition: 2s;
 }
 
+.darken {
+  opacity: 0;
+  transform: scale(80%);
+  transition: 2s;
+}
+
+.shown {
+  opacity: 1;
+  transform: scale(100%);
+  transition: 2s;
+}
+
 img {
   border: 0;
 }
