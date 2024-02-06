@@ -96,17 +96,6 @@ const ObserveR = new IntersectionObserver((entries) => {
 const HiddenElement = document.querySelectorAll(".hidden2");
 HiddenElement.forEach((element) => ObserveR.observe(element));
 
-const picture = document.querySelector(".picture");
-const circle = document.querySelector(".circle");
-
-picture.addEventListener("mousemove", function (e) {
-  const rect = picture.getBoundingClientRect();
-  const x = e.clientX - rect.left - circle.offsetWidth / 2;
-  const y = e.clientY - rect.top - circle.offsetHeight / 2;
-
-  circle.style.transform = `translate(${x}px, ${y}px)`;
-});
-
 const observern = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     console.log(entry);
@@ -119,4 +108,15 @@ const observern = new IntersectionObserver((entries) => {
 });
 
 const darkenElements = document.querySelectorAll(".darken");
-darkenElements.forEach((element) => observer.observe(element));
+darkenElements.forEach((element) => observer.observern(element));
+
+const picture = document.querySelector(".picture");
+const circle = document.querySelector(".circle");
+
+picture.addEventListener("mousemove", function (e) {
+  const rect = picture.getBoundingClientRect();
+  const x = e.clientX - rect.left - circle.offsetWidth / 2;
+  const y = e.clientY - rect.top - circle.offsetHeight / 2;
+
+  circle.style.transform = `translate(${x}px, ${y}px)`;
+});
