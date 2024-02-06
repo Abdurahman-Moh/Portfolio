@@ -108,7 +108,7 @@ const observern = new IntersectionObserver((entries) => {
 });
 
 const darkenElements = document.querySelectorAll(".darken");
-darkenElements.forEach((element) => observer.observern(element));
+darkenElements.forEach((element) => observern.observe(element));
 
 const picture = document.querySelector(".picture");
 const circle = document.querySelector(".circle");
