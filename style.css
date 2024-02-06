@@ -189,7 +189,7 @@ body {
 .shown {
   opacity: 1;
   transform: scale(100%);
-  transition: 2s;
+  transition: 1s;
 }
 
 img {
